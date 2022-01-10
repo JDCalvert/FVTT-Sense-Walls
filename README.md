@@ -1,7 +1,7 @@
 # FVTT Sense Walls
 A module for Foundry VTT that allows walls to block only certain senses, while other senses can "pierce" the wall.
 
-Recommended for use with PF2e Rules Based Vision
+Recommended for use with [PF2e Rules Based NPC Vision](https://github.com/JDCalvert/FVTT-PF2e-Rules-Based-NPC-Vision).
 
 ## Supported Systems
 * [Pathfinder 2e](https://foundryvtt.com/packages/pf2e)
