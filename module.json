@@ -18,7 +18,7 @@
     "manifest": "https://raw.githubusercontent.com/JDCalvert/FVTT-Sense-Walls/main/module.json",
     "readme": "https://github.com/JDCalvert/FVTT-Sense-Walls",
     "bugs": "https://github.com/JDCalvert/FVTT-Sense-Walls/issues",
-    "changelog": "https://github.com/JDCalvert/FVTT-Sense-Walls",
+    "changelog": "https://github.com/JDCalvert/FVTT-Sense-Walls/blob/main/CHANGELOG.md",
     "scripts": [
         "scripts/sensewalls.js"
     ],
