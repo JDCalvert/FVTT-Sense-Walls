@@ -110,7 +110,7 @@ Hooks.on(
             "WRAPPER"
         );
 
-        if (game.modules.get("levels").active) {
+        if (game.modules.get("levels")?.active) {
             libWrapper.register(
                 senseWallsModuleName,
                 "Levels.prototype.advancedLosTestInLos",
