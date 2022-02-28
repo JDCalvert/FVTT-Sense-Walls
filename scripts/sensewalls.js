@@ -107,7 +107,8 @@ Hooks.on(
                     return wrapped(...args);
                 }
             },
-            "WRAPPER"
+            "WRAPPER",
+            { perf_mode: "FAST" }
         );
 
         if (game.modules.get("levels")?.active) {
@@ -118,7 +119,7 @@ Hooks.on(
                     updateVisionLevel(args[0]);
                     let result = wrapped(...args);
                     resetVisionLevel();
-                    return result
+                    return result;
                 }
             );
 
@@ -132,8 +133,9 @@ Hooks.on(
                         return wrapped(...args);
                     }
                 },
-                "WRAPPER"
+                "WRAPPER",
+                { perf_mode: "FAST" }
             );
         }
     }
-)
+);
