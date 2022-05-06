@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.3 - 2022-05-06
+- Fix an issue with NPCs with missing sense data
+
 ## 1.0.2 - 2022-02-28
 - Change wall inclusion overrides to high-performance mode
 

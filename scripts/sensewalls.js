@@ -51,7 +51,7 @@ function updateVisionLevel(token) {
     if (actor.type === "npc") {
         //NPCs have one "sense" which is a free-text entry. Try to find the individual senses from there
         //by splitting on comma characters and removing whitespace and the dash in "low-light vision"
-        senses = senses.value.split(",").map(s => s.replace(/[\s-]+/g, '').toLowerCase());
+        senses = (senses.value ?? "").split(",").map(s => s.replace(/[\s-]+/g, '').toLowerCase());
     } else if (actor.type == "character" || actor.type == "familiar") {
         //Characters have an array of senses. Just put them to lower case to make matching easier
         senses = senses.map(sense => sense.type.toLowerCase());
