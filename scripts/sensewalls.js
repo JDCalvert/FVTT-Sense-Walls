@@ -15,7 +15,7 @@ function buildOption(optionName, optionValue, currentValue) {
 
 Hooks.on(
     "renderWallConfig",
-    (app, html, data) => {
+    (app, html) => {
         let requiredVisionLevel = app.object.getFlag(senseWallsModuleName, "visionLevel") || VisionLevel.NONE;
         let newHtml = `
             <div class="form-group">
@@ -46,7 +46,7 @@ function updateVisionLevel(token) {
         return;
     }
 
-    let senses = actor.data.data.traits.senses;
+    let senses = actor.system.traits.senses;
 
     if (actor.type === "npc") {
         //NPCs have one "sense" which is a free-text entry. Try to find the individual senses from there
@@ -99,22 +99,24 @@ Hooks.on(
         // Ignore the wall if the token's vision level is sufficient to pierce the wall, as per the wall configuration
         libWrapper.register(
             senseWallsModuleName,
-            "ClockwiseSweepPolygon.testWallInclusion",
+            "ClockwiseSweepPolygon.prototype._testWallInclusion",
             function filterWalls(wrapped, ...args) {
-                if (args[2] === "sight") {
+                if (this.config.type === "sight") {
                     return wrapped(...args) && shouldIncludeWall(args[0]);
                 } else {
                     return wrapped(...args);
                 }
             },
             "WRAPPER",
-            { perf_mode: "FAST" }
+            {
+                perf_mode: "FAST"
+            }
         );
 
         if (game.modules.get("levels")?.active) {
             libWrapper.register(
                 senseWallsModuleName,
-                "Levels.prototype.advancedLosTestInLos",
+                "CONFIG.Levels.handlers.SightHandler.advancedLosTestInLos",
                 function updateTokenVisionSourceLevels(wrapped, ...args) {
                     updateVisionLevel(args[0]);
                     let result = wrapped(...args);
@@ -125,7 +127,7 @@ Hooks.on(
 
             libWrapper.register(
                 senseWallsModuleName,
-                "Levels.prototype.shouldIgnoreWall",
+                "CONFIG.Levels.handlers.SightHandler.shouldIgnoreWall",
                 function filterWallsLevels(wrapped, ...args) {
                     if (args[1] === 0) {
                         return wrapped(...args) || !shouldIncludeWall(args[0]);
@@ -134,7 +136,9 @@ Hooks.on(
                     }
                 },
                 "WRAPPER",
-                { perf_mode: "FAST" }
+                {
+                    perf_mode: "FAST"
+                }
             );
         }
     }
