@@ -3,6 +3,11 @@ A module for Foundry VTT that allows walls to block only certain senses, while o
 
 Recommended for use with [PF2e Rules Based NPC Vision](https://github.com/JDCalvert/FVTT-PF2e-Rules-Based-NPC-Vision).
 
+![Github All Releases](https://img.shields.io/github/downloads/JDCalvert/FVTT-Sense-Walls/total.svg)
+![Github Latest Release](https://img.shields.io/github/downloads/JDCalvert/FVTT-Sense-Walls/2.0.0/total)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/jdcalvert)
+
 ## Supported Systems
 - [Pathfinder 2e](https://foundryvtt.com/packages/pf2e)
 
