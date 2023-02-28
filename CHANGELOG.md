@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.1 - 2023-02-28
+- Fix an error trying to determine loot actors' senses
+
 ## 2.0.0 - 2022-12-22
 - Foundry v10 compatibility
 

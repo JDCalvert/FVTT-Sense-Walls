@@ -42,7 +42,7 @@ game.currentTokenVisionLevel = null;
 
 function updateVisionLevel(token) {
     let actor = token.actor;
-    if (!actor) {
+    if (!actor || !["character", "npc", "familiar"].includes(actor.type)) {
         return;
     }
 
