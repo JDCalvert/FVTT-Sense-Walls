@@ -17,11 +17,11 @@ Walls can be configured to only block up to a certain level of vision. For examp
 This can be used to set up an area created by the [Darkness](https://2e.aonprd.com/Spells.aspx?ID=59) spell, which blocks light from the other side.
 
 ### Wall Configuration
-![Wall Configuration](images/wall-config.png)
+![Wall Configuration](images/wall-config.webp)
 ### With Darkvision
-![With Darkvision](images/darkvision.png)
+![With Darkvision](images/darkvision.webp)
 ### With Normal Vision
-![Without Darkvision](images/normal-vision.png)
+![Without Darkvision](images/normal-vision.webp)
 
 ### Setup
 The setup above also uses the [Perfect Vision](https://foundryvtt.com/packages/perfect-vision) module to create an area of darkness, which is surrounded with walls using the config above.
