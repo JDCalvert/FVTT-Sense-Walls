@@ -2,7 +2,7 @@
     "id": "sense-walls",
     "title": "Sense Walls",
     "description": "Enable walls only for tokens without a certain vision level.",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "authors": [
         {
             "name": "JDCalvert"
@@ -10,7 +10,7 @@
     ],
     "compatibility": {
         "minimum": "10",
-        "verified": "10"
+        "verified": "11"
     },
     "relationships": {
         "systems": [
@@ -28,7 +28,7 @@
     },
     "url": "https://github.com/JDCalvert/FVTT-Sense-Walls",
     "manifest": "https://github.com/JDCalvert/FVTT-Sense-Walls/releases/latest/download/module.json",
-    "download": "https://github.com/JDCalvert/FVTT-Sense-Walls/archive/2.0.1.zip",
+    "download": "https://github.com/JDCalvert/FVTT-Sense-Walls/archive/2.0.2.zip",
     "readme": "https://github.com/JDCalvert/FVTT-Sense-Walls",
     "bugs": "https://github.com/JDCalvert/FVTT-Sense-Walls/issues",
     "changelog": "https://github.com/JDCalvert/FVTT-Sense-Walls/blob/main/CHANGELOG.md",
